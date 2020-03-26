@@ -8,9 +8,13 @@ class AppContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            GuestWhoHaveRSVP: ["RSVP :-)"],
-            GuestWhoDidntRSVP: ["RSVP :-("]
+            GuestWhoHaveRSVP: [],
+            GuestWhoDidntRSVP: []
         };
+    };
+
+    didTheyRSVP = () => {
+        console.log("RSVP Status Check")
     };
 
     render() {
@@ -19,7 +23,7 @@ class AppContainer extends Component {
                 {/* Component Roll Call */}
                 {/* <h1>AppContainer-"Here!"</h1> */}
                 <h1 id="AppHeader">Guest Book Manager</h1>
-                <GuestBookForm id="Form" />
+                <GuestBookForm callback={this.didTheyRSVP} id="Form" />
                 <GuestBookList id="List" awaitResponse={this.state.GuestWhoDidntRSVP} />
                 <GuestBookListRsvp id="Rsvp" rsvpGuest={this.state.GuestWhoHaveRSVP} />
             </Fragment>
