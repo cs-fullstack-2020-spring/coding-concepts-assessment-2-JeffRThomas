@@ -8,8 +8,8 @@ class AppContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            GuestWhoHaveRSVP: [],
-            GuestWhoDidntRSVP: []
+            GuestWhoHaveRSVP: ["RSVP :-)"],
+            GuestWhoDidntRSVP: ["RSVP :-("]
         };
     };
 

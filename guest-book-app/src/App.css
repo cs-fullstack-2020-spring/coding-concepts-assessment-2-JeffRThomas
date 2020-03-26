@@ -2,7 +2,7 @@
   text-align: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   background-color: peachpuff;
   color: silver;
 }
@@ -14,7 +14,7 @@
 
 #guestEntry {
   grid-column: 2;
-  grid-row: 2/3;
+  grid-row: 3/5;
 }
 
 #guestBookList {

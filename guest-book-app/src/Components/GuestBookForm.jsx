@@ -39,18 +39,24 @@ class GuestBookForm extends Component {
                 <form id="guestEntry">
                     <fieldset>
                         <legend>Enter A New Guest</legend>
+                        <div>
                         <label htmlFor="nameinput">Name: </label>
                         <input name="nameinput" id="nameinput" placeholder="Enter Guest Name" value={this.state.Name} onChange={this.inputFieldInfo}></input>
+                        </div>
 
+                        <div>
                         <label htmlFor="numberinput">Number: </label>
                         <input name="numberinput" id="numberinput" placeholder="999-999-9999" value={this.state.Number} onChange={this.inputFieldInfo}></input>
+                        </div>
 
+                        <div>
                         <label htmlFor="rsvpstatus">RSVP: </label>
                         <select name="rsvpstatus" id="rsvpstatus" value={this.state.RSVP} onChange={this.inputFieldInfo}>
                             <option>Click To Select</option>
                             <option>Yes</option>
                             <option>No</option>
                         </select>
+                        </div>
 
                         <button onClick={this.guestEntry}>Enter Guest</button>
                     </fieldset>
