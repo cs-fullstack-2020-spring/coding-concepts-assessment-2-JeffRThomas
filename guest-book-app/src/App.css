@@ -1,16 +1,30 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: peachpuff;
+  color: silver;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#AppHeader {
+  grid-column: 2;
+  grid-row: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#guestEntry {
+  grid-column: 2;
+  grid-row: 2/3;
+}
+
+#guestBookList {
+  grid-column: 1;
+  grid-row: 2/4;
+}
+
+#guestBookListRsvp {
+  grid-column: 3;
+  grid-row: 2/4;
 }
 
 .App-header {
@@ -22,17 +36,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

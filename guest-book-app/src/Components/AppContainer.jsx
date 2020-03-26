@@ -7,16 +7,21 @@ import GuestBookListRsvp from './GuestBookListRsvp';
 class AppContainer extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            GuestWhoHaveRSVP: [],
+            GuestWhoDidntRSVP: []
+        };
     };
 
     render() {
         return (
             <Fragment>
-                <h1>AppContainer-"Here!"</h1>
-                <GuestBookForm/>
-                <GuestBookList/>
-                <GuestBookListRsvp/>
+                {/* Component Roll Call */}
+                {/* <h1>AppContainer-"Here!"</h1> */}
+                <h1 id="AppHeader">Guest Book Manager</h1>
+                <GuestBookForm id="Form" />
+                <GuestBookList id="List" awaitResponse={this.state.GuestWhoDidntRSVP} />
+                <GuestBookListRsvp id="Rsvp" rsvpGuest={this.state.GuestWhoHaveRSVP} />
             </Fragment>
         )
     };

@@ -10,7 +10,10 @@ class GuestBookList extends Component {
     render() {
         return (
             <Fragment>
-                <h4>GuestList-"Here!"</h4>
+                {/* Component Roll Call */}
+                {/* <h4>GuestList-"Here!"</h4> */}
+                <h2>Waiting for Response</h2>
+                {this.props.awaitResponse}
             </Fragment>
         )
     };

@@ -10,7 +10,10 @@ class GuestBookListRsvp extends Component {
     render() {
         return (
             <Fragment>
-                <h4>RSVP-"Here!"</h4>
+                {/* Component Roll Call */}
+                {/* <h4>RSVP-"Here!"</h4> */}
+                <h2>RSVP</h2>
+                {this.props.rsvpGuest}
             </Fragment>
         )
     };
