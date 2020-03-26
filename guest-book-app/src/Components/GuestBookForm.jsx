@@ -28,7 +28,7 @@ class GuestBookForm extends Component {
         guest.preventDefault();
         console.log("Guest Entered");
         console.log(this.state)
-        this.props.callback(guest)
+        this.props.callback(this.state)
         this.setState({ Name: "", Number: "", RSVP: "" })
     }
 

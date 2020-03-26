@@ -13,8 +13,16 @@ class AppContainer extends Component {
         };
     };
 
-    didTheyRSVP = () => {
+    didTheyRSVP = (guest) => {
         console.log("RSVP Status Check")
+        console.log(guest)
+        if (guest.RSVP === "Yes") {
+            this.state.GuestWhoHaveRSVP.push(guest)
+        } else if (guest.RSVP === "No") {
+            this.state.GuestWhoDidntRSVP.push(guest)
+        }
+        console.log(this.state.GuestWhoHaveRSVP)
+        console.log(this.state.GuestWhoDidntRSVP)
     };
 
     render() {
@@ -24,8 +32,8 @@ class AppContainer extends Component {
                 {/* <h1>AppContainer-"Here!"</h1> */}
                 <h1 id="AppHeader">Guest Book Manager</h1>
                 <GuestBookForm callback={this.didTheyRSVP} id="Form" />
-                <GuestBookList id="List" awaitResponse={this.state.GuestWhoDidntRSVP} />
-                <GuestBookListRsvp id="Rsvp" rsvpGuest={this.state.GuestWhoHaveRSVP} />
+                <GuestBookList awaitResponse={this.state.GuestWhoDidntRSVP} />
+                <GuestBookListRsvp rsvpGuest={this.state.GuestWhoHaveRSVP} />
             </Fragment>
         )
     };
